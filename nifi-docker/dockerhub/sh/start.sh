@@ -38,6 +38,9 @@ prop_replace 'nifi.web.http.host'               "${NIFI_WEB_HTTP_HOST:-$HOSTNAME
 prop_replace 'nifi.remote.input.host'           "${NIFI_REMOTE_INPUT_HOST:-$HOSTNAME}"
 prop_replace 'nifi.remote.input.socket.port'    "${NIFI_REMOTE_INPUT_SOCKET_PORT:-10000}"
 prop_replace 'nifi.remote.input.secure'         'false'
+prop_replace 'nifi.web.http.network.interface.default' "${NIFI_WEB_HTTP_INTERFACE_DEFAULT:-}"
+prop_replace 'nifi.web.http.network.interface.lo' "${NIFI_WEB_HTTP_INTERFACE_LO:-}"
+
 
 # Set nifi-toolkit properties files and baseUrl
 "${scripts_dir}/toolkit.sh"
